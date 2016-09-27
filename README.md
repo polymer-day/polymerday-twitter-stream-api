@@ -1,14 +1,18 @@
-# \<polymer-twitter-realtimeline\>
+# Twitter stream API
 
-Twitter real timeline. It will track a 'active' hashtag from firebase
+This API is in charge of opening a stream connection with Twitter API, to track a #hashtag and emit tweet events throught web sockects technology
 
-## Install the Polymer-CLI
+**Important**: The API works with the web component [polymer-twitter-realtimeline](https://github.com/polymer-day/polymerday-twitter-realtimeline)
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
+## Install Node and npm
 
-## config.json file
+First, make sure you have the [Node JS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed. 
 
-Create a [Twitter App](https://apps.twitter.com/), config it, get the necessary keys and tokens and put then in config.json file
+## Config.json file
+
+Create a [Twitter App](https://apps.twitter.com/), config it, get the necessary keys and tokens and put then in config.json file.
+
+Instead config.json file, you can create the corresponding **Environment Variables** if you want
 
 ```json
 {
@@ -19,34 +23,9 @@ Create a [Twitter App](https://apps.twitter.com/), config it, get the necessary 
 }
 ```
 
-## Firebase
-You will need to create and set up a [Firebase Realtime Database](https://firebase.google.com/docs/database/) 
-and in demo index file configure the firebase-app component
-
-```html
-<firebase-app
-          auth-domain="your_your_auth_domain"
-          database-url="your_data_url"
-          api-key="your_api_key"
-          storage-bucket="your_storage_bucket"></firebase-app>
-```
-The database mush have a path, you can change it in demo code. By default (active/hashtag/to/track)
-
-![path](https://cloud.githubusercontent.com/assets/10350688/18666822/1b2f229e-7f2e-11e6-947c-40214ea45330.png)
-
-## Server up and Running (It's in charge of Twitter stream connection)
+## Server up and Running
 
 ```html
 $ npm install
-$ node app.js
+$ npm start
 ```
-
-## Viewing Your Application and Demo
-
-```
-$ cd public
-public$ bower install
-public$ polymer serve
-```
-
-Take a look at demo code to know how to use the componet
