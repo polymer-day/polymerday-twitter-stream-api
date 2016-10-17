@@ -1,6 +1,6 @@
 {
   "name": "twit-stream",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Twit stream",
   "author": "Edu Martin",
   "main": "index.js",
